@@ -1,13 +1,13 @@
 server:
-    port: 3344
+    port: 3355
 spring:
     profiles: dev
     application:
         name: cloud-config-client
 eureka:
-    client:
-        service-url:
-            defaultZone: http://localhost:7001/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
 ---
 server:
     port: 8202
@@ -16,6 +16,6 @@ spring:
     application:
         name: cloud-config-client
 eureka:
-    client:
-        service-url:
-            defaultZone: http://localhost:7001/eureka/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
