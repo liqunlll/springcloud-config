@@ -8,6 +8,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+  instance:
+    instance-id: config-client
 ---
 server:
     port: 8202
@@ -19,3 +21,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+  instance:
+    instance-id: config-client
