@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cloud-config-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: provider
+          uri: lb://provider
+          predicates:
+            - Path=/provider/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
